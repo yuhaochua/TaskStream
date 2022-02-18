@@ -40,10 +40,17 @@ public class Main {
 
         return count;
     }
+
     public static void printData(ArrayList<Task> tasksData) {
         for (Task t : tasksData) {
             System.out.println(t);
         }
+    }
+
+    public static void printDataWithStreams(ArrayList<Task> tasks){
+        System.out.println("\nPrint tasks using streams");
+        tasks.stream()      //convert task data to a stream
+                .forEach(System.out::println); //terminal operation
     }
 
     public static void printDeadlines(ArrayList<Task> tasksData) {
